@@ -28,7 +28,8 @@ mysql> show tables;
 | UserInfo                           |
 | UserScorePicks                     |
 | UserStatsPicks                     |
-| playoffround                       |
+| playoffround                       | 
+| usuario                            |
 +------------------------------------+
 10 rows in set (0.00 sec)
 
@@ -194,3 +195,18 @@ mysql> desc playoffround;
 6 rows in set (0.00 sec)
 mysql> insert into playoffround(id,team1id,team2id,StartTime,endTime,roundNum) values('6','5','4','2025/02/03/','2025/02/03','7');
 Query OK, 1 row affected, 2 warnings (0.01 sec)
+mysql> desc usuarios;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| idx          | int          | NO   |     | NULL    |       |
+| nombre       | varchar(100) | NO   | PRI | NULL    |       |
+| apellidos    | varchar(100) | NO   | PRI | NULL    |       |
+| departamento | varchar(100) | NO   |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> insert into usuarios(idx 
+    -> ^C
+^C
+mysql> insert into usuarios(idx,nombre,apellidos,departamento) values ('54','95','90','85');
+Query OK, 1 row affected (0.01 sec)
